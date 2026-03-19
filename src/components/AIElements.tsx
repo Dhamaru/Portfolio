@@ -450,7 +450,7 @@ export function AskAI() {
   const ref = useRef<HTMLDivElement>(null);
 
   const responses: Record<PromptId, string> = {
-    stack: "My core stack revolves around Python and TypeScript. For GenAI, I leverage LangChain and LangGraph to build agentic workflows, powered by models from OpenAI and Anthropic. On the backend, I build scalable services with FastAPI and Pydantic. For the frontend, I use React, Tailwind CSS, and Framer Motion to create premium, interactive experiences.",
+    stack: "My core expertise revolves around building interoperable AI systems. I leverage the Model Context Protocol (MCP) to seamlessly connect LLMs with external tools, and design Agent-to-Agent (A2A) communication protocols inside LangGraph for collaborative multi-agent workflows.",
     rag: "I design high-performance Retrieval-Augmented Generation (RAG) pipelines. This involves chunking and embedding documents into vector databases (like ChromaDB or Pinecone), and building multi-agent systems in LangGraph to intelligently route queries, grade retrieved context, and synthesize accurate, hallucination-free answers.",
     vibe: "I believe in 'vibe-coding'—building fast, iterating often, and maintaining a tight feedback loop. I use tools like Replit AI and TRAE-CLI to accelerate development, allowing me to focus on architectural decisions and premium UX rather than boilerplate code.",
     hire: "I'm currently a GenAI Engineering Intern at LTTS and I'll be graduating in 2026. I'm actively looking for opportunities where I can push the boundaries of LLM applications, build scalable AI products, and contribute to a forward-thinking engineering team!"

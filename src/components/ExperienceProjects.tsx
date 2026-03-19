@@ -34,14 +34,14 @@ const Experience: React.FC = () => {
 
               <p className="exp-desc">
                 Engineering state-of-the-art agentic workflows using LangChain and LangGraph to automate
-                complex business processes. Developed high-performance RAG (Retrieval-Augmented Generation)
-                pipelines for intelligent document querying. Architected scalable backend services with
-                FastAPI and Pydantic, while continuously exploring transformer architectures and
-                fine-tuning methodologies.
+                complex business processes. Designed and implemented Agent-to-Agent (A2A) communication 
+                architectures for collaborative multi-agent problem solving. Integrated diverse external 
+                tools and capabilities into LLMs leveraging the Model Context Protocol (MCP), significantly
+                enhancing model context and boundaries.
               </p>
 
               <StaggerContainer stagger={0.06} className="exp-tags">
-                {["LangChain", "LangGraph", "FastAPI", "Pydantic", "OpenAI API", "RAG", "Python"].map((tag) => (
+                {["LangGraph", "MCP", "A2A Protocols", "OpenAI API", "RAG", "Agentic Workflows"].map((tag) => (
                   <StaggerItem key={tag} direction="left">
                     <span className="exp-tag">{tag}</span>
                   </StaggerItem>

@@ -18,18 +18,18 @@ const About: React.FC = () => {
           <div className="about-text">
             <ScrollReveal delay={0.1}>
               <p>
-                I am a passionate GenAI / LLM Engineer and Full-Stack AI Developer with a drive for building
-                intelligent systems that solve complex problems. My expertise lies in architecting agentic
-                workflows using LangGraph and LangChain, and developing robust RAG pipelines that bridge the
-                gap between data and meaningful AI interactions.
+                I am a passionate GenAI / LLM Engineer with a drive for building
+                intelligent, autonomous systems. My expertise lies in architecting multi-agent 
+                workflows using Agent-to-Agent (A2A) communication protocols, and enabling dynamic 
+                tool integration via the Model Context Protocol (MCP) to expand LLM capabilities.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <p>
                 Currently pursuing my B.Tech in CSE AI (2026), I've had the opportunity to work as an
-                intern at LTTS, where I focused on engineering production-grade AI services using
-                FastAPI and Pydantic. I believe in "vibe-coding" — building fast, iterating often,
-                and leveraging the latest AI tools to push the boundaries of what's possible.
+                intern at LTTS, where I focused on engineering production-grade AI services. I believe in 
+                "vibe-coding" — building fast, iterating often, and leveraging the latest AI tools to push 
+                the boundaries of what's possible.
               </p>
             </ScrollReveal>
           </div>
@@ -135,7 +135,7 @@ const Skills: React.FC = () => {
   const categories = [
     {
       label: "AI / LLM",
-      skills: ["LangChain", "LangGraph", "OpenAI API", "Anthropic API", "RAG Pipelines", "Prompt Engineering", "Embeddings", "Vector Databases"],
+      skills: ["LangChain", "LangGraph", "MCP (Model Context)", "A2A Protocols", "OpenAI API", "Anthropic API", "RAG Pipelines", "Prompt Engineering"],
       highlight: true
     },
     {
