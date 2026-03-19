@@ -117,14 +117,11 @@ const Contact: React.FC = () => {
                   kasivasi2005@gmail.com
                 </motion.a>
                 <div className="contact-socials">
-                  <a href="tel:+919490389057" className="blue-link">
-                    <Phone size={22} strokeWidth={1.5} />
-                    9490389057
-                  </a>
                   <a href="https://github.com/Dhamaru" className="blue-link" target="_blank" rel="noopener noreferrer">
                     <Github size={22} strokeWidth={1.5} />
-                    GitHub
+                    GitHub Profile
                   </a>
+                  <span className="contact-note">Email available upon request via LinkedIn or GitHub.</span>
                 </div>
               </div>
             </div>
@@ -221,7 +218,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} • Built with Vibe</p>
+          <p>© {new Date().getFullYear()} • Personal Portfolio of Dhamaru Kuchibhatla • Built with Vibe</p>
+          <p style={{ marginTop: '8px', opacity: 0.6 }}>This is a personal project for showcase purposes only.</p>
         </div>
       </div>
       <style>{`
