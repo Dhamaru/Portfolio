@@ -109,7 +109,7 @@ const Contact: React.FC = () => {
               <div className="contact-actions">
                 <motion.a
                   href="mailto:kasivasi2005@gmail.com"
-                  className="btn-primary contact-btn"
+                  className="btn-primary contact-email-btn"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -117,25 +117,14 @@ const Contact: React.FC = () => {
                   kasivasi2005@gmail.com
                 </motion.a>
                 <div className="contact-socials">
-                  <motion.a
-                    href="tel:+919490389057"
-                    className="btn-outline contact-btn"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Phone size={20} />
+                  <a href="tel:+919490389057" className="blue-link">
+                    <Phone size={22} strokeWidth={1.5} />
                     9490389057
-                  </motion.a>
-                  <motion.a
-                    href="https://github.com/Dhamaru"
-                    className="btn-outline contact-btn"
-                    target="_blank" rel="noopener noreferrer"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Github size={20} />
+                  </a>
+                  <a href="https://github.com/Dhamaru" className="blue-link" target="_blank" rel="noopener noreferrer">
+                    <Github size={22} strokeWidth={1.5} />
                     GitHub
-                  </motion.a>
+                  </a>
                 </div>
               </div>
             </div>
@@ -170,23 +159,48 @@ const Contact: React.FC = () => {
         }
         .contact-inner {
           padding: 60px 40px;
+          background: #FFFFFF;
+          border-radius: 20px;
         }
         .contact-actions {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 24px;
+          gap: 32px;
+        }
+        .contact-email-btn {
+          background: #000000;
+          color: #FFFFFF;
+          border-radius: 100px;
+          padding: 14px 32px;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-weight: 600;
         }
         .contact-socials {
           display: flex;
-          gap: 16px;
+          gap: 32px;
+          align-items: center;
         }
-        .contact-btn {
-          justify-content: center;
+        .blue-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          color: #0000EE;
+          font-size: 20px;
+          font-weight: 500;
+          text-decoration: underline;
+          text-underline-offset: 4px;
+          transition: opacity 0.3s;
+        }
+        .blue-link:hover {
+          opacity: 0.8;
         }
         @media (max-width: 640px) {
-          .contact-socials { flex-direction: column; width: 100%; }
-          .contact-btn { width: 100%; }
+          .contact-socials { flex-direction: column; gap: 24px; }
+          .contact-email-btn { width: 100%; justify-content: center; }
         }
       `}</style>
     </section>

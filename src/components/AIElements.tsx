@@ -96,9 +96,6 @@ export function NeuralNetwork() {
 
         ctx.beginPath();
         ctx.arc(node.x, node.y, pulseRadius, 0, Math.PI * 2);
-        ctx.fillStyle = `${accentBlue}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`;
-        // Note: The above is a bit risky if hex isn't returned. Better to use rgba conversion or just let it be.
-        // Let's use simpler approach:
         ctx.fillStyle = accentBlue;
         ctx.globalAlpha = alpha;
         ctx.fill();
@@ -346,7 +343,7 @@ export function CodeTerminal() {
               <div className={`code-line ${getLineClass(currentLine)}`}>
                 <span className="line-num">{displayedLines.length + 1}</span>
                 {currentLine}
-                <span className="cursor-blink">│</span>
+                <span className="cursor-blink">|</span>
               </div>
             )}
           </pre>
@@ -464,34 +461,32 @@ export function AskAI() {
   ] as const;
 
   const handlePromptClick = useCallback((id: PromptId) => {
-    if (isTyping && activePrompt === id) return;
-    
     setActivePrompt(id);
     setDisplayedText('');
     setIsTyping(true);
     
     const fullText = responses[id];
-    let currentIndex = 0;
+    let i = 0;
     
-    // Clear any existing typing interval (handling rapid clicks)
+    // Clear any existing typing interval
+    if (ref.current && (ref.current as any).typeInterval) {
+      clearInterval((ref.current as any).typeInterval);
+    }
+
     const intervalId = setInterval(() => {
-      if (currentIndex < fullText.length) {
-        setDisplayedText(prev => prev + fullText.charAt(currentIndex));
-        currentIndex++;
+      if (i < fullText.length) {
+        setDisplayedText(fullText.substring(0, i + 1));
+        i++;
       } else {
         clearInterval(intervalId);
         setIsTyping(false);
       }
-    }, 15); // Fast typing speed (token streaming simulation)
+    }, 15);
 
-    // Store interval ID on element to clear if another prompt is clicked
     if (ref.current) {
-      if ((ref.current as any).typeInterval) {
-        clearInterval((ref.current as any).typeInterval);
-      }
       (ref.current as any).typeInterval = intervalId;
     }
-  }, [isTyping, activePrompt]);
+  }, [responses]);
 
   return (
     <div ref={ref} className="ask-ai-container">
@@ -537,17 +532,16 @@ export function AskAI() {
         .ask-ai-container {
           margin: 60px auto 0;
           max-width: 800px;
-          border-radius: var(--radius-lg);
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid rgba(255, 255, 255, 0.05);
-          backdrop-filter: blur(10px);
+          border-radius: 24px;
+          background: #FFFFFF;
+          border: 1px solid var(--border-color);
           overflow: hidden;
-          box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+          box-shadow: var(--shadow-md);
         }
         .ask-ai-header {
-          padding: 24px 32px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-          background: rgba(0,0,0,0.2);
+          padding: 32px;
+          border-bottom: 1px solid var(--border-color);
+          background: #F9FAFB;
         }
         .ask-ai-title {
           display: flex;
@@ -556,15 +550,15 @@ export function AskAI() {
           margin-bottom: 6px;
         }
         .ask-ai-title h3 {
-          font-size: 18px;
+          font-size: 20px;
           font-weight: 700;
           color: var(--text-primary);
         }
         .sparkle-icon {
-          font-size: 16px;
+          font-size: 18px;
         }
         .ask-ai-subtitle {
-          font-size: 14px;
+          font-size: 15px;
           color: var(--text-secondary);
         }
         .ask-ai-window {
@@ -577,8 +571,8 @@ export function AskAI() {
           margin-bottom: 32px;
         }
         .prompt-chip {
-          padding: 10px 18px;
-          background: var(--card-bg);
+          padding: 10px 20px;
+          background: #FFFFFF;
           border: 1px solid var(--border-color);
           border-radius: 100px;
           color: var(--text-primary);
@@ -586,27 +580,28 @@ export function AskAI() {
           font-weight: 600;
           cursor: pointer;
           transition: all 0.2s ease;
+          box-shadow: var(--shadow-sm);
         }
         .prompt-chip:hover {
-          border-color: var(--accent-blue);
+          border-color: var(--accent-primary);
+          color: var(--accent-primary);
           transform: translateY(-2px);
-          box-shadow: var(--shadow-soft);
+          box-shadow: var(--shadow-md);
         }
         .prompt-chip.active {
-          background: rgba(29, 95, 204, 0.1);
-          border-color: var(--accent-blue);
-          color: var(--accent-blue);
+          background: var(--accent-primary);
+          border-color: var(--accent-primary);
+          color: #FFFFFF;
         }
         .ask-ai-response-area {
-          min-height: 120px;
-          padding: 24px;
-          background: rgba(0, 0, 0, 0.3);
-          border-radius: var(--radius-md);
-          border: 1px solid rgba(255, 255, 255, 0.03);
-          box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+          min-height: 140px;
+          padding: 32px;
+          background: #F9FAFB;
+          border-radius: 16px;
+          border: 1px solid var(--border-color);
         }
         .ask-ai-placeholder {
-          color: rgba(255, 255, 255, 0.2);
+          color: var(--text-secondary);
           font-style: italic;
           text-align: center;
           margin-top: 24px;
@@ -619,28 +614,27 @@ export function AskAI() {
         }
         .response-avatar {
           font-size: 24px;
-          background: var(--card-bg);
-          padding: 10px;
+          background: #FFFFFF;
+          padding: 12px;
           border-radius: 50%;
           border: 1px solid var(--border-color);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+          box-shadow: var(--shadow-sm);
           flex-shrink: 0;
         }
         .response-text {
           font-size: 16px;
           line-height: 1.7;
           color: var(--text-primary);
-          padding-top: 8px;
+          padding-top: 10px;
         }
         .streaming-cursor {
           display: inline-block;
           width: 8px;
-          height: 16px;
-          background: var(--accent-blue);
-          margin-left: 4px;
+          height: 18px;
+          background: var(--accent-primary);
+          margin-left: 6px;
           transform: translateY(2px);
           animation: cursorFlash 0.5s infinite;
-          box-shadow: 0 0 8px var(--accent-blue);
         }
         @keyframes cursorFlash {
           0%, 100% { opacity: 1; }
@@ -649,7 +643,7 @@ export function AskAI() {
         @media (max-width: 640px) {
           .ask-ai-header, .ask-ai-window { padding: 24px; }
           .ask-ai-prompts { gap: 8px; }
-          .prompt-chip { font-size: 13px; padding: 8px 14px; }
+          .prompt-chip { font-size: 13px; padding: 8px 16px; }
         }
       `}</style>
     </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import TiltCard from './TiltCard';
 import { MapPin, GraduationCap, Briefcase, Mail } from 'lucide-react';
 import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 
@@ -9,8 +8,7 @@ const About: React.FC = () => {
       <div className="container">
         <ScrollReveal>
           <div className="section-header">
-            <span className="section-number">01 · About</span>
-            <h2 className="section-title">About Me</h2>
+            <span className="section-title">About Me</span>
           </div>
         </ScrollReveal>
 
@@ -36,43 +34,43 @@ const About: React.FC = () => {
 
           <StaggerContainer stagger={0.12} className="about-info-cards">
             <StaggerItem>
-              <TiltCard className="info-card">
+              <div className="card info-card">
                 <MapPin className="info-icon" size={20} />
                 <div>
                   <span className="info-label">Location</span>
-                  <span className="info-val">Vijayawada, AP</span>
+                  <span className="info-val">Vijayawada, India</span>
                 </div>
-              </TiltCard>
+              </div>
             </StaggerItem>
 
             <StaggerItem>
-              <TiltCard className="info-card">
+              <div className="card info-card">
                 <GraduationCap className="info-icon" size={20} />
                 <div>
                   <span className="info-label">Degree</span>
                   <span className="info-val">B.Tech CSE AI 2026</span>
                 </div>
-              </TiltCard>
+              </div>
             </StaggerItem>
 
             <StaggerItem>
-              <TiltCard className="info-card">
+              <div className="card info-card">
                 <Briefcase className="info-icon" size={20} />
                 <div>
                   <span className="info-label">Currently at</span>
                   <span className="info-val">LTTS GenAI Intern</span>
                 </div>
-              </TiltCard>
+              </div>
             </StaggerItem>
 
             <StaggerItem>
-              <TiltCard className="info-card">
+              <div className="card info-card">
                 <Mail className="info-icon" size={20} />
                 <div>
                   <span className="info-label">Email</span>
                   <span className="info-val">kasivasi2005@gmail.com</span>
                 </div>
-              </TiltCard>
+              </div>
             </StaggerItem>
           </StaggerContainer>
         </div>
@@ -100,12 +98,10 @@ const About: React.FC = () => {
           display: flex !important;
           align-items: center;
           gap: 16px;
-          padding: 20px !important;
-          background: var(--card-bg) !important;
-          border: 1px solid var(--border-color);
+          padding: 24px !important;
         }
         .info-icon {
-          color: var(--accent-blue);
+          color: var(--accent-primary);
           flex-shrink: 0;
         }
         .info-label {
@@ -119,6 +115,7 @@ const About: React.FC = () => {
         .info-val {
           font-size: 15px;
           font-weight: 600;
+          color: var(--text-primary);
         }
         @media (max-width: 1024px) {
           .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -158,7 +155,6 @@ const Skills: React.FC = () => {
       <div className="container">
         <ScrollReveal>
           <div className="section-header">
-            <span className="section-number">02 · Skills</span>
             <h2 className="section-title">Skills & Tech</h2>
           </div>
         </ScrollReveal>
@@ -198,7 +194,7 @@ const Skills: React.FC = () => {
         .skill-row {
           display: grid;
           grid-template-columns: 200px 1fr;
-          align-items: center;
+          align-items: flex-start;
           gap: 40px;
           padding-bottom: 32px;
           border-bottom: 1px solid var(--border-color);
@@ -217,26 +213,32 @@ const Skills: React.FC = () => {
           gap: 12px;
         }
         .skill-pill {
-          padding: 8px 18px;
+          display: inline-block;
+          padding: 10px 20px;
           background: var(--card-bg);
           color: var(--text-primary);
           border-radius: 100px;
           font-size: 14px;
-          font-weight: 600;
+          font-weight: 500;
           border: 1px solid var(--border-color);
           transition: all 0.3s ease;
           white-space: nowrap;
+          box-shadow: var(--shadow-sm);
         }
         .skill-pill:hover {
-          border-color: var(--accent-blue);
-          color: var(--accent-blue);
+          border-color: var(--accent-primary);
+          color: var(--accent-primary);
           transform: translateY(-2px);
-          box-shadow: var(--shadow-soft);
+          box-shadow: var(--shadow-md);
         }
         .skill-pill.highlight {
-          background: rgba(29, 95, 204, 0.1);
-          border-color: rgba(29, 95, 204, 0.2);
-          color: var(--accent-blue);
+          background: #000000;
+          color: #FFFFFF;
+          border-color: #000000;
+        }
+        .skill-pill.highlight:hover {
+          background: #333333;
+          border-color: #333333;
         }
         @media (max-width: 768px) {
           .skill-row { grid-template-columns: 1fr; gap: 16px; }
