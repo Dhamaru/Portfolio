@@ -1,0 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(29, 95, 204, 0.15);
+  color: var(--accent-blue);
+}
+
+/* App-specific styles if any, otherwise keep empty */
+.app-wrapper {
+
+  min-height: 100vh;
+  position: relative;
+}
