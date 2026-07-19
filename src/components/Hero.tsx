@@ -174,7 +174,7 @@ const Hero: React.FC = () => {
           <ScrollReveal delay={0.4} direction="right">
             <div className="hero-illustration-wrapper">
               <img 
-                src="/hero_sketch.png" 
+                src="hero_sketch.png" 
                 alt="GenAI Engineer Sketch" 
                 className="hero-illustration"
               />
