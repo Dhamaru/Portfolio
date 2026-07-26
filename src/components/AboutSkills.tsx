@@ -25,7 +25,7 @@ const About: React.FC = () => {
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <p>
-                Currently pursuing my B.Tech in CSE AI (2026), I've worked as a GenAI Engineering intern
+                I completed my B.Tech in CSE AI (2026), and have worked as a GenAI Engineering intern
                 at LTTS while independently shipping full-stack projects like Saptaswara, a Next.js music
                 studio with real-time audio synthesis and AI-assisted composition. I believe in
                 "vibe-coding" — building fast, iterating often, and leveraging the latest AI tools to push
@@ -50,7 +50,7 @@ const About: React.FC = () => {
                 <GraduationCap className="info-icon" size={20} />
                 <div>
                   <span className="info-label">Degree</span>
-                  <span className="info-val">B.Tech CSE AI 2026</span>
+                  <span className="info-val">B.Tech CSE AI, 2026 Grad</span>
                 </div>
               </div>
             </StaggerItem>
