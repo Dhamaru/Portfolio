@@ -148,7 +148,7 @@ const Skills: React.FC = () => {
     },
     {
       label: "Tools",
-      skills: ["Git", "Vercel", "VS Code", "Replit AI", "TRAE-CLI", "Postman"]
+      skills: ["Git", "Vercel", "VS Code", "Claude Code", "Antigravity", "Postman"]
     }
   ];
 

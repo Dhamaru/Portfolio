@@ -449,7 +449,7 @@ export function AskAI() {
   const responses: Record<PromptId, string> = {
     stack: "I'm a full-stack developer first — Next.js/React on the frontend, Node.js/Python on the backend, Supabase/MongoDB for data. I use modern AI platforms to build faster, and layer on applied GenAI engineering (MCP, LangGraph, A2A protocols) when a product calls for intelligent workflows, like the AI features in Saptaswara.",
     rag: "I design high-performance Retrieval-Augmented Generation (RAG) pipelines. This involves chunking and embedding documents into vector databases (like ChromaDB or Pinecone), and building multi-agent systems in LangGraph to intelligently route queries, grade retrieved context, and synthesize accurate, hallucination-free answers.",
-    vibe: "I believe in 'vibe-coding'—building fast, iterating often, and maintaining a tight feedback loop. I use tools like Replit AI and TRAE-CLI to accelerate development, allowing me to focus on architectural decisions and premium UX rather than boilerplate code.",
+    vibe: "I believe in 'vibe-coding'—building fast, iterating often, and maintaining a tight feedback loop. I use tools like Claude Code and Antigravity to accelerate development, allowing me to focus on architectural decisions and premium UX rather than boilerplate code.",
     hire: "I'm currently a GenAI Engineering Intern at LTTS and I'll be graduating in 2026. I'm actively looking for opportunities where I can push the boundaries of LLM applications, build scalable AI products, and contribute to a forward-thinking engineering team!"
   };
 

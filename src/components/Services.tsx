@@ -21,7 +21,7 @@ const Services: React.FC = () => {
     {
       icon: <Zap size={24} />,
       title: "Rapid Prototyping",
-      desc: "Leveraging the latest vibe-coding tools like Replit AI and TRAE-CLI, I rapidly convert ideas into functioning Proof of Concepts, iterating on high-quality code at speed.",
+      desc: "Leveraging the latest vibe-coding tools like Claude Code and Antigravity, I rapidly convert ideas into functioning Proof of Concepts, iterating on high-quality code at speed.",
       features: ["Fast MVP delivery", "Vibe-coding with AI", "Quick integrations", "Iterative refinement"],
       dark: false
     }
