@@ -246,7 +246,7 @@ const Hero: React.FC = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: center 24%;
+          object-position: center 10%;
         }
 
         @media (max-width: 1024px) {
