@@ -16,17 +16,19 @@ const About: React.FC = () => {
           <div className="about-text">
             <ScrollReveal delay={0.1}>
               <p>
-                I am a passionate GenAI / LLM Engineer with a drive for building
-                intelligent, autonomous systems. My expertise lies in architecting multi-agent 
-                workflows using Agent-to-Agent (A2A) communication protocols, and enabling dynamic 
-                tool integration via the Model Context Protocol (MCP) to expand LLM capabilities.
+                I'm a full-stack developer who builds complete products — frontend, backend, database,
+                and deployment — and pairs that with hands-on GenAI engineering. I use modern AI
+                platforms to move faster without cutting corners, and apply that same AI fluency to
+                architecting multi-agent workflows, Model Context Protocol (MCP) integrations, and RAG
+                pipelines when a project calls for it.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <p>
-                Currently pursuing my B.Tech in CSE AI (2026), I've had the opportunity to work as an
-                intern at LTTS, where I focused on engineering production-grade AI services. I believe in 
-                "vibe-coding" — building fast, iterating often, and leveraging the latest AI tools to push 
+                Currently pursuing my B.Tech in CSE AI (2026), I've worked as a GenAI Engineering intern
+                at LTTS while independently shipping full-stack projects like Saptaswara, a Next.js music
+                studio with real-time audio synthesis and AI-assisted composition. I believe in
+                "vibe-coding" — building fast, iterating often, and leveraging the latest AI tools to push
                 the boundaries of what's possible.
               </p>
             </ScrollReveal>
@@ -131,22 +133,22 @@ const About: React.FC = () => {
 const Skills: React.FC = () => {
   const categories = [
     {
-      label: "AI / LLM",
-      skills: ["LangChain", "LangGraph", "MCP (Model Context)", "A2A Protocols", "OpenAI API", "Anthropic API", "RAG Pipelines", "Prompt Engineering"],
+      label: "Frontend",
+      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
       highlight: true
     },
     {
       label: "Backend",
-      skills: ["Python", "FastAPI", "Pydantic", "Node.js", "Express", "MongoDB"],
-      special: ["Python", "FastAPI", "Pydantic"]
+      skills: ["Node.js", "Express", "Python", "FastAPI", "Pydantic", "Supabase", "MongoDB"],
+      special: ["Node.js", "Supabase"]
     },
     {
-      label: "Frontend",
-      skills: ["React", "TypeScript", "Tailwind CSS", "HTML/CSS"]
+      label: "GenAI Tooling",
+      skills: ["LangChain", "LangGraph", "MCP (Model Context)", "A2A Protocols", "OpenAI API", "Anthropic API", "RAG Pipelines", "Prompt Engineering"]
     },
     {
       label: "Tools",
-      skills: ["Git", "VS Code", "Replit AI", "TRAE-CLI", "Postman"]
+      skills: ["Git", "Vercel", "VS Code", "Replit AI", "TRAE-CLI", "Postman"]
     }
   ];
 

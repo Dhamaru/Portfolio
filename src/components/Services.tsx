@@ -5,18 +5,18 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 const Services: React.FC = () => {
   const services = [
     {
-      icon: <Bot size={24} />,
-      title: "AI Workflows",
-      desc: "I architect complex multi-agent workflows using LangGraph and LangChain. I specialize in enabling Agent-to-Agent (A2A) communication and seamless tool execution via MCP.",
-      features: ["LangGraph architectures", "A2A protocols", "Custom MCP servers", "Agentic automation"],
-      dark: false
+      icon: <Layers size={24} />,
+      title: "Full-Stack Development",
+      desc: "I build complete products end to end — Next.js/React frontends, Node & Python backends, databases, and deployment — assisted by modern AI platforms to move fast without sacrificing quality.",
+      features: ["Next.js & React", "Node.js & FastAPI", "Supabase / MongoDB", "Vercel deployment"],
+      dark: true
     },
     {
-      icon: <Layers size={24} />,
-      title: "Full-Stack GenAI",
-      desc: "I build complete, deeply integrated AI applications from scratch. From robust FastAPI backends and vector databases to dynamic React/TypeScript frontends.",
-      features: ["RAG pipelines", "FastAPI & Pydantic", "React & TailwindUI", "Vector DB integrations"],
-      dark: true
+      icon: <Bot size={24} />,
+      title: "GenAI Integration",
+      desc: "When a product needs it, I bring applied GenAI engineering — multi-agent workflows with LangGraph, Agent-to-Agent (A2A) communication, and Model Context Protocol (MCP) tool integration.",
+      features: ["LangGraph architectures", "A2A protocols", "Custom MCP servers", "RAG pipelines"],
+      dark: false
     },
     {
       icon: <Zap size={24} />,

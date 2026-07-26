@@ -134,13 +134,13 @@ const Hero: React.FC = () => {
           <ScrollReveal delay={0.3}>
             <h1 className="hero-name">
               Hi, I'm Dhamaru<br/>
-              GenAI <span className="serif-italic">Engineer</span>
+              Full-Stack <span className="serif-italic">Developer</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.4}>
             <p className="hero-bio">
-              I architect intelligent, autonomous systems and agentic workflows. With a strong background in web development and LLM integration, I bring powerful AI capabilities to life through clean architecture and thoughtful design.
+              I build production full-stack applications end to end — React/Next.js frontends, Node & Python backends — assisted by modern AI platforms and grounded in hands-on GenAI engineering (LangGraph, MCP, RAG). I ship real products, not just demos.
             </p>
           </ScrollReveal>
 
@@ -175,7 +175,7 @@ const Hero: React.FC = () => {
             <div className="hero-illustration-wrapper">
               <img 
                 src="hero_sketch.png" 
-                alt="GenAI Engineer Sketch" 
+                alt="Full-Stack Developer Sketch"
                 className="hero-illustration"
               />
             </div>
