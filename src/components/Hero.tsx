@@ -173,9 +173,9 @@ const Hero: React.FC = () => {
         <div className="hero-visual">
           <ScrollReveal delay={0.4} direction="right">
             <div className="hero-illustration-wrapper">
-              <img 
-                src="hero_sketch.png" 
-                alt="Full-Stack Developer Sketch"
+              <img
+                src="hero_photo.jpg"
+                alt="Dhamaru Kuchibhatla"
                 className="hero-illustration"
               />
             </div>
@@ -236,17 +236,17 @@ const Hero: React.FC = () => {
         .hero-illustration-wrapper {
           position: relative;
           width: 100%;
-          max-width: 500px;
-          display: flex;
-          justify-content: center;
+          max-width: 420px;
+          aspect-ratio: 4 / 5;
+          border-radius: 24px;
+          overflow: hidden;
+          box-shadow: var(--shadow-lg);
         }
         .hero-illustration {
           width: 100%;
-          height: auto;
-          object-fit: contain;
-          filter: grayscale(1) contrast(1.2) brightness(1.4);
-          mix-blend-mode: multiply;
-          background-color: transparent;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 15%;
         }
 
         @media (max-width: 1024px) {
