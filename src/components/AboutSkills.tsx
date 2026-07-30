@@ -144,11 +144,13 @@ const Skills: React.FC = () => {
     },
     {
       label: "GenAI Tooling",
-      skills: ["LLM", "LangGraph", "MCP (Model Context)", "A2A Protocols", "OpenAI API", "Anthropic API", "RAG Pipelines", "Prompt Engineering"]
+      skills: ["LLM", "MCP (Model Context)", "OpenAI API", "Anthropic API", "RAG Pipelines", "Prompt Engineering"],
+      special: ["MCP (Model Context)", "Anthropic API"]
     },
     {
       label: "Tools",
-      skills: ["Vercel", "GitHub", "Claude Code", "Antigravity"]
+      skills: ["Vercel", "GitHub", "Claude Code", "Antigravity"],
+      special: ["GitHub", "Claude Code"]
     }
   ];
 
